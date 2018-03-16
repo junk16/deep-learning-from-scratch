@@ -5,7 +5,10 @@ import numpy as np
 def AND(x1, x2):
     x = np.array([x1, x2])
     w = np.array([0.5, 0.5])
-    b = -0.7
+    # thresholds is -0.5 between OR and AND
+    # -0.5 : AND gate
+    # -0.4 : OR gate
+    b = -0.5
     tmp = np.sum(w*x) + b
     if tmp <= 0:
         return 0

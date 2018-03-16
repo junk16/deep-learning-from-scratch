@@ -4,6 +4,8 @@ import numpy as np
 
 def NAND(x1, x2):
     x = np.array([x1, x2])
+    # reverse wight and thresholds from AND gate    
+    #
     w = np.array([-0.5, -0.5])
     b = 0.7
     tmp = np.sum(w*x) + b
